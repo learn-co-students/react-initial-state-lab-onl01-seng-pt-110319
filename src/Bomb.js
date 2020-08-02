@@ -12,13 +12,8 @@ export default class Bomb extends Component {
 	}
 
 	handleBoom = () => {	
-		let seconds = this.state.secondsLeft
-		setInterval(() => {
-			this.setState({
-				secondsLeft: seconds-1
-			})
-		}, 1000)
-		if (seconds === 0) {
+
+		if (this.state.secondsLeft === 0) {
 			return "Boom!"
 		}
 		else {
